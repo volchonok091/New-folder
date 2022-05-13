@@ -10,7 +10,7 @@ void Board::printBoard()
 		for (int i = 0; i < width; i++)
 		{
 			cout << place[i][j];
-			for (int k = 0; k < retNumDigits(i); k++)//Used if the width is greater than 10 to increase spacing
+			for (int k = 0; k < retNumDigits(i); k++)
 				cout << " ";
 		}
 		cout << "|";
@@ -40,13 +40,13 @@ char Board::addPiece(int inPlace, char player)//Add a piece to the board and ret
 		}
 	}
 
-	return 'f';//There isn't room left on the board
+	return 'f';
 }
 
 bool Board::checkWin(char checker)//Check to see if the player has won
 {
 	int count = 0;
-	//Right-left diagonal check (going down)
+	//Right-left diagonal check 
 	for (int i = width - 1; i >= win - 1; i--)
 	{
 		for (int j = height - 1; j >= win - 1; j--)
@@ -71,7 +71,7 @@ bool Board::checkWin(char checker)//Check to see if the player has won
 		}
 	}
 
-	//Left-Right diagonal check (going down)
+	//Left-Right diagonal check 
 	for (int i = 0; i < width - win; i++)
 	{
 		for (int j = height - 1; j >= win - 1; j--)
@@ -96,7 +96,7 @@ bool Board::checkWin(char checker)//Check to see if the player has won
 		}
 	}
 
-	//Left-Right Horizontal check
+	//Left-Right horizontal check
 	for (int i = 0; i < width - win; i++)
 	{
 		for (int j = 0; j < height; j++)
