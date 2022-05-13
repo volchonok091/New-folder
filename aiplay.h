@@ -10,7 +10,6 @@ private:
 	int height, width, win;
 	char player1, player2;
 	char **originalPlace;
-	///static unsigned long long globCount;
 
 	
 
