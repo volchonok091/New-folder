@@ -3,8 +3,6 @@
 #include <iostream>
 using namespace std;
 
-//unsigned long long AiPlay::globCount = 0;
-
 AiPlay::~AiPlay()
 {
 	for (int i = 0; i < depth; i++)
@@ -43,10 +41,6 @@ void AiPlay::setup(int inWidth, int inheight, char inPlayer1, char inPlayer2, ch
 	originalPlace = inPlace;
 	win = inWin;
 	/*
-	Structure of 4D array:
-
-	[Depth of moves] [Player Board] [Width] [height]
-
 	Player 0 is the AI player
 	player 1 is the user
 	*/
@@ -100,7 +94,7 @@ int AiPlay::checkWin(char checker, int playerNum, int position)
 	else
 		winReturn = 10;
 
-	//Right-left diagonal check (going down)
+	//Right-left diagonal check 
 	for (int i = width - 1; i >= win - 1; i--)
 	{
 		for (int j = height - 1; j >= win - 1; j--)
@@ -127,7 +121,7 @@ int AiPlay::checkWin(char checker, int playerNum, int position)
 		}
 	}
 
-	//Left-Right diagonal check (going down)
+	//Left-Right diagonal check 
 	for (int i = 0; i < width - win; i++)
 	{
 		for (int j = height - 1; j >= win - 1; j--)
@@ -154,7 +148,7 @@ int AiPlay::checkWin(char checker, int playerNum, int position)
 		}
 	}
 
-	//Left-Right Horizontal check
+	//Left-Right horizontal check
 	for (int j = 0; j < height; j++)
 	{
 		for (int i = 0; i < width - win; i++)
