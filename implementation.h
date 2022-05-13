@@ -4,12 +4,6 @@
 #include <fstream>
 using namespace std;
 
-/*
-	This class inherits the Board class, it adds features like functions to configure settings
-	like changing the pieces, changing the amount of diagonals to in etc. It also provides an
-	option to save the current play, along with the settings into a file called 'data.c4x'g
-*/
-
 class Implementation : public Board
 {
 private:
